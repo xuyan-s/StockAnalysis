@@ -1,6 +1,11 @@
 package com.xuyan.stock.mapper;
 
+import com.xuyan.stock.pojo.domain.InnerMarketDomain;
 import com.xuyan.stock.pojo.entity.StockMarketIndexInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 /**
 * @author 14562
@@ -22,4 +27,5 @@ public interface StockMarketIndexInfoMapper {
 
     int updateByPrimaryKey(StockMarketIndexInfo record);
 
+    List<InnerMarketDomain> getMarketInfo(@Param("curDate") Date curDate, @Param("marketCodes") List<String> marketCodes);
 }

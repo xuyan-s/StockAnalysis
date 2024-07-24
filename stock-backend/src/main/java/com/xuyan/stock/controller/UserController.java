@@ -8,6 +8,8 @@ import com.xuyan.stock.vo.resp.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 /**
  * @description 用户控制器
  * @createDate 2024-07-20 16:36:55
@@ -33,5 +35,10 @@ public class UserController {
     @PostMapping("/login")
     public R<LoginRespVo> login(@RequestBody LoginReqVo loginReqVo) {
         return userService.login(loginReqVo);
+    }
+
+    @GetMapping("/captcha")
+    public R<Map> getCaptcha() {
+        return userService.getCaptcha();
     }
 }

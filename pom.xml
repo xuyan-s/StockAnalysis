@@ -155,7 +155,6 @@
     </dependencyManagement>
 
 
-
     <!--管理插件-->
     <build>
         <!--引入插件的版本锁定-->
@@ -166,14 +165,14 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <!--防止打包时出现找不到springboot启动类的情况-->
-                                <goal>repackage</goal>
-                            </goals>
-                        </execution>
-                    </executions>
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <goals>-->
+<!--                                &lt;!&ndash;防止打包时出现找不到springboot启动类的情况&ndash;&gt;-->
+<!--                                <goal>repackage</goal>-->
+<!--                            </goals>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
                     <configuration>
                         <excludes>
                             <!--插件运行时排除依赖-->

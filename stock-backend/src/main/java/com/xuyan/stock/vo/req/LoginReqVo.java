@@ -11,4 +11,6 @@ public class LoginReqVo {
 
     private String code;
 
+    private String sessionId;
+
 }

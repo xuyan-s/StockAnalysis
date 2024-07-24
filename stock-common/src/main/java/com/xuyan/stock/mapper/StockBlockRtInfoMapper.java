@@ -1,6 +1,12 @@
 package com.xuyan.stock.mapper;
 
+import com.xuyan.stock.pojo.domain.OuterMarketDomain;
+import com.xuyan.stock.pojo.domain.StockBlockDomain;
 import com.xuyan.stock.pojo.entity.StockBlockRtInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.Date;
+import java.util.List;
 
 /**
 * @author 14562
@@ -22,4 +28,7 @@ public interface StockBlockRtInfoMapper {
 
     int updateByPrimaryKey(StockBlockRtInfo record);
 
+    List<StockBlockDomain> sectorAllLimit(@Param("timePoint") Date curDate);
+
+    List<OuterMarketDomain> externalIndex(@Param("timePoint") Date lastDate);
 }
